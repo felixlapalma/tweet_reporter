@@ -1,0 +1,25 @@
+Provincia,Total,Capital,Region,url,caso
+La Rioja, 129, 135,NOA,0,provincia
+Santiago del Estero,127,133,NOA,0,provincia
+Tucuman,126,132,NOA,0,provincia
+Salta,125,131,NOA,0,provincia
+Jujuy,124,130,NOA,0,provincia
+Catamarca,156,134,NOA,0,provincia
+Cordoba,145,149,CENTRO,0,provincia
+San Luis,146,,CENTRO,0,provincia
+Corrientes,118,121,NEA,0,provincia
+Chaco,117,119,NEA,0,provincia
+Formosa,116,120,NEA,0,provincia
+Misiones,115,,NEA,0,provincia
+Santa Fe,2591,,LITORAL,0,provincia
+Entre Rios,2592,,LITORAL,0,provincia
+Mendoza,143,147,CUYO,0,provincia
+San Juan,144,148,CUYO,0,provincia
+La Pampa,2595,,COMAHUE,0,provincia
+Neuquen,2596,,COMAHUE,0,provincia
+Rio Negro,2590,,COMAHUE,0,provincia
+Santa Cruz,2593,,PATAGONIA,0,provincia
+Chubut,2594,,PATAGONIA,0,provincia
+Buenos Aires,425,,CENTRO,1,provincia
+GBA,426,,GBA,1,region
+SADI,1002,,,1,total
