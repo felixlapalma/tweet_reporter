@@ -1,5 +1,5 @@
 #
-export prod_lib="/home/felix/Proyectos/tweet_informer"
+export prod_lib="/home/felix/produccion/tweet_reporter"
 #
 export env_dir="/home/felix/anaconda3/envs/tweet_reporter"
 export env_bin="/home/felix/anaconda3/envs/tweet_reporter/bin"
