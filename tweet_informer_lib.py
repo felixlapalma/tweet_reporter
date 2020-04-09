@@ -11,7 +11,6 @@ import zipfile as ziphlr
 import tweepy,json
 import geopandas as gpd
 import unidecode as unidecode
-import geoplot as gplt
 #
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
