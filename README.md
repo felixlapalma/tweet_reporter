@@ -6,5 +6,4 @@ Repositorio con scripts miscelaneos para el posteo via tweets.
 
 Consumo de potencia de la Republica Argentina discriminada por provincia (src: [cammesa](https://portalweb.cammesa.com/default.aspx))
 
-- Demanda (MW) de la Republica Argentina x provincia ([py](consume_reporter_argentina.py)/[ipynb](consume_reporter_argentina.ipynb))
-
+- Demanda (MW) de la Republica Argentina x provincia ([py](consume_reporter_argentina.py)/[ipynb](consume_reporter_argentina.ipynb)) ![tweet_consume](https://github.com/felixlapalma/tweet_reporter/workflows/tweet_consume/badge.svg)
