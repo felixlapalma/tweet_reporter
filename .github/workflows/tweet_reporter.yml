@@ -26,7 +26,7 @@ jobs:
          TWITTER_ACCESS_TOKEN:  ${{ secrets.twitter_access_token }}
          TWITTER_ACCESS_TOKEN_SECRET:  ${{ secrets.twitter_access_token_secret }}
       run: |
-        python consume_reporter_geojson.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET}
+        python consume_reporter_argentina.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET}
 
  
 
