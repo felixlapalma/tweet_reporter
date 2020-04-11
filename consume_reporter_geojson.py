@@ -9,12 +9,16 @@
 
 
 #hide
-from tweet_informer_lib import os, wget,shutil,pd,glob,sys,zipCompressDir,datetime
-from tweet_informer_lib import make_cammesa_url,make_plt_provincia_capital_bars,cammesa_consume_reader
+import os,sys,glob,shutil
+import zipfile
+from tweet_informer_lib import wget,pd,datetime
+from tweet_informer_lib import cammesa_consume_reader
 from tweet_informer_lib import json,tweepy,reduce,plt,gpd,unidecode,make_cammesa_url_v2
 from IPython.display import display
+
 #
-jnb=False
+jnb=False# To display html
+local_config=False # to use local credentials files (True) else sys.args input
 
 
 # ### Pre-Procesamiento
@@ -33,8 +37,11 @@ prov_dict=pd_cfg.T.to_dict()
 
 
 #hide
-df_prov=gpd.read_file('cfg/provincia.geojson')
-df_prov.NAM=df_prov.NAM.apply(unidecode.unidecode)
+with zipfile.ZipFile('cfg/provincia_geojson.zip', 'r') as zip_ref:
+    zip_ref.extractall('cfg')
+    df_prov=gpd.read_file('cfg/provincia.geojson')
+    df_prov.NAM=df_prov.NAM.apply(unidecode.unidecode)
+    os.remove('cfg/provincia.geojson')
 
 
 # In[4]:
@@ -184,18 +191,24 @@ except:
 
 
 #collapse
-## .tweepy.json not available
-config_file = 'cfg/.tweepy.json'
 try:
-    with open(config_file) as fh:
-        config = json.load(fh)
-        auth = tweepy.OAuthHandler(config['consumer_key'], config['consumer_secret'])
-        auth.set_access_token(config['access_token'], config['access_token_secret'])
-        twitter = tweepy.API(auth)
-        tweet ='Demanda Provincias [MW] y % Total Pais'
-        image_path =figName
-        # to attach the media file 
-        status = twitter.update_with_media(image_path, tweet)
+    if local_config:
+        ## .tweepy.json not available
+        config_file = 'cfg/.tweepy.json'
+        with open(config_file) as fh:
+            config = json.load(fh)
+    else:
+        # use sys.arg (## .tweepy.json not available)
+        config={'consumer_key':sys.argv[1],             'consumer_secret':sys.argv[2],             'access_token': sys.argv[3],             'access_token_secret':sys.argv[4]}
+        
+    
+    auth = tweepy.OAuthHandler(config['consumer_key'], config['consumer_secret'])
+    auth.set_access_token(config['access_token'], config['access_token_secret'])
+    twitter = tweepy.API(auth)
+    tweet ='Demanda Provincias [MW] y % Total Pais'
+    image_path =figName
+    # to attach the media file 
+    status = twitter.update_with_media(image_path, tweet)
 except:
     shutil.rmtree(tmp)
     sys.exit('Failed to TWEET')
@@ -217,14 +230,6 @@ if jnb:
     s = ("""<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Demanda Provincias [MW] y % Total Pais <a href="https://t.co/QmQ4dLX0Na">pic.twitter.com/QmQ4dLX0Na</a></p>&mdash; misc reporter (@ReporterMisc) <a href="https://twitter.com/ReporterMisc/status/1248263928779587584?ref_src=twsrc%5Etfw">April 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> """)
     ## src: https://github.com/jupyter/notebook/issues/2790
     display(Tweet(s))
-
-
-# In[16]:
-
-
-#hide
-#zipname=os.path.join(arxive,req_time+'_consumo_mapa_provincias.zip')
-#zipCompressDir(zipname,tmp)
 
 
 # In[17]:
