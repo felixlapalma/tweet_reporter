@@ -1,6 +1,6 @@
 # Tweet reporter
 
-Repositorio con scripts miscelaneos para el posteo via tweets.
+Repositorio con scripts miscelaneos para el posteo via tweets [@ReporterMisc](https://twitter.com/ReporterMisc)
 
 ### Potencia
 
