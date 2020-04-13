@@ -28,5 +28,3 @@ jobs:
       run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Mendoza"
     - name: Tweet Consumer Santiago del Estero 
       run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Santiago del Estero"
-    - name: Tweet Consumer Buenos Aires 
-      run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Buenos Aires"
