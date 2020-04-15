@@ -8,4 +8,8 @@ Consumo de potencia de la Republica Argentina discriminada por provincia (src: [
 
 - Demanda (MW) de la Republica Argentina x provincia ([py](consume_reporter_argentina.py)/[ipynb](consume_reporter_argentina.ipynb)) ![tweet_consume](https://github.com/felixlapalma/tweet_reporter/workflows/tweet_consume/badge.svg)
 
-- Demanda (MW) para ciertas provincias ([py](consume_reporter_provincias.py)/[ipynb](consume_reporter_provincias.ipynb)) ![TConsumeProvincias](https://github.com/felixlapalma/tweet_reporter/workflows/TConsumeProvincias/badge.svg)
+#### Provincias
+Demanda (MW) para provincias([py](consume_reporter_provincias.py)/[ipynb](consume_reporter_provincias.ipynb))
+- NEA ![Demanda_Provincias_NEA](https://github.com/felixlapalma/tweet_reporter/workflows/Demanda_Provincias_NEA/badge.svg)
+- NOA ![Demanda_Provincias_NOA](https://github.com/felixlapalma/tweet_reporter/workflows/Demanda_Provincias_NOA/badge.svg)
+- Centro (solo Córdoba) ![Demanda_Provincias_Centro](https://github.com/felixlapalma/tweet_reporter/workflows/Demanda_Provincias_Centro/badge.svg)
