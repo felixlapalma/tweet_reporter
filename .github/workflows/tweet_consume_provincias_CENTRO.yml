@@ -1,4 +1,4 @@
-name: TConsumeProvincias
+name: Demanda_Provincias_Centro
 env:
   TWITTER_CONSUMER_KEY:  ${{ secrets.twitter_consumer_key }}
   TWITTER_CONSUMER_SECRET:  ${{ secrets.twitter_consumer_secret }}
@@ -6,7 +6,7 @@ env:
   TWITTER_ACCESS_TOKEN_SECRET:  ${{ secrets.twitter_access_token_secret }}
 on:
   schedule:
-    - cron: '10 */3 * * *'
+    - cron: '5 */3 * * *'
 jobs:
   tweet:
     runs-on: ubuntu-latest
@@ -22,9 +22,3 @@ jobs:
         pip install -r requirements.txt
     - name: Tweet Consumer Cordoba 
       run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Cordoba"
-    - name: Tweet Consumer Tucuman 
-      run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Tucuman"
-    - name: Tweet Consumer Mendoza 
-      run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Mendoza"
-    - name: Tweet Consumer Santiago del Estero 
-      run: python consume_reporter_provincias.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET} "Santiago del Estero"
