@@ -1,4 +1,4 @@
-name: TConsumeArgentina
+name: Demanda_MW_Argentina
 env:
   TWITTER_CONSUMER_KEY:  ${{ secrets.twitter_consumer_key }}
   TWITTER_CONSUMER_SECRET:  ${{ secrets.twitter_consumer_secret }}
