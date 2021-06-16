@@ -24,7 +24,7 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        python3 -m pip3 install --upgrade pip
-        pip3 install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
     - name: Tweet Consumer 
       run: python3 consume_reporter_argentina.py ${TWITTER_CONSUMER_KEY} ${TWITTER_CONSUMER_SECRET} ${TWITTER_ACCESS_TOKEN} ${TWITTER_ACCESS_TOKEN_SECRET}
