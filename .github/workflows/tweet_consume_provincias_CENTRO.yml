@@ -6,7 +6,7 @@ env:
   TWITTER_ACCESS_TOKEN_SECRET:  ${{ secrets.twitter_access_token_secret }}
 on:
   schedule:
-    - cron: '5 */3 * * *'
+    - cron: '5 */6 * * *'
 jobs:
   tweet:
     runs-on: ubuntu-latest
